@@ -62,26 +62,7 @@ function create_response($text, $message)
     global $usernamebot;
     global $input_wisata;
     global $nama_wisata;
-    // inisiasi variable hasil yang mana merupakan hasil olahan pesan
-    $hasil = '';  
-    $jawab = '';
-    $fromid = $message["from"]["id"]; // variable penampung id user
-    $chatid = $message["chat"]["id"]; // variable penampung id chat
-    $pesanid= $message['message_id']; // variable penampung id message
-    // variable penampung username nya user
-    isset($message["from"]["username"])
-        ? $chatuser = $message["from"]["username"]
-        : $chatuser = '';
-   
-    // variable penampung nama user
-    isset($message["from"]["last_name"])
-        ? $namakedua = $message["from"]["last_name"]
-        : $namakedua = '';  
-    $namauser = $message["from"]["first_name"]. ' ' .$namakedua;
-    // ini saya pergunakan untuk menghapus kelebihan pesan spasi yang dikirim ke bot.
-    $textur = preg_replace('/\s\s+/', ' ', $text);
-    // memecah pesan dalam 2 blok array, kita ambil yang array pertama saja
-    $command = explode(' ',$textur,2); 
+    // inisiasi variable hasil yang mana merupakan hasil olahan pesa 
                 
     if ($text == "/start") {
         return "Selamat Datang di BOT Wisata Batu, untuk mengetahui informasi tentang wisata apa saja di Kota Batu, ketikkan nama wisata yang ingin anda tuju";
