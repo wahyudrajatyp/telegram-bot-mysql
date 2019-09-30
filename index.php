@@ -9,8 +9,8 @@
 </html>
 <?php
 //isikan token dan nama botmu yang di dapat dari bapak bot :
-$TOKEN      = "936352772:AAGnW442bLHmBgP34kmSfUvIibx83nkJmzk"; // ganti dengan token bot anda
-$usernamebot= "@WisataBatuBot"; // sesuaikan besar kecilnya, bermanfaat nanti jika bot dimasukkan grup.
+$TOKEN      = "758688977:AAE1MUSF-gIdavpg65OMSW14y6w6cw_6qRI"; // ganti dengan token bot anda
+$usernamebot= "@@WisataBatu_Bot"; // sesuaikan besar kecilnya, bermanfaat nanti jika bot dimasukkan grup.
 // aktifkan ini jika perlu debugging
 $debug = false;
  
