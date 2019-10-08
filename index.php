@@ -143,7 +143,7 @@ function create_response($text, $message)
             $a++;
         }
     }
-  
+ 
 }
  
 // jebakan token, klo ga diisi akan mati
