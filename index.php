@@ -136,7 +136,7 @@ function create_response($text, $message)
                     $query = "SELECT * FROM wisata WHERE idwisata = '$key'";
                     $hasil = mysqli_query($conn,$query);
                     while($row = mysqli_fetch_assoc($hasil)){
-                         $tambahan .= "\n""Temuan Lainnya : ".$row["nama_wisata"]." , ".$row["informasi"]."\n";
+                         $tambahan .= "\n"."Temuan Lainnya : ".$row["nama_wisata"]." , ".$row["informasi"]."\n";
                     }
                 }else{
 
