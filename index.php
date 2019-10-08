@@ -105,6 +105,20 @@ function create_response($text, $message)
             $c++;
         }
         arsort($total_array);
+        $b = 1;
+        foreach ($total_array as $key => $value) {
+            if ($b==1) {
+                // if ($value != 0) {
+                    $query = "SELECT * FROM wisata WHERE idwisata = '$key'";
+                    $hasil = mysqli_query($con,$query);
+                    while($row = mysqli_fetch_assoc($hasil)){
+                        $id_tertinggi = $row["idwisata"];
+                        $nilai_tertinggi = $value;
+                    }
+                // }
+            }
+            $b++;
+        }
         $a = 1;
         foreach ($total_array as $key => $value) {
             if ($a == 1) {
@@ -116,6 +130,14 @@ function create_response($text, $message)
                     }
                 }else{
                     return "Kata Anda Tidak Ditemukan, Coba Lagi";
+                }
+            }elseif ($nilai_tertinggi == $value) {
+                if ($value != 0) {
+                    $query = "SELECT * FROM wisata WHERE idwisata = '$key'";
+                    $hasil = mysqli_query($con,$query);
+                    while($row = mysqli_fetch_assoc($hasil)){
+                        return "Temuan Lainnya : ".$row["nama_wisata"]." , ".$row["informasi"];
+                    }
                 }
             }
             $a++;
